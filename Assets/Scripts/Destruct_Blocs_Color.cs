@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Destruc_Blocs : MonoBehaviour {
+public class Destruct_Blocs_Color : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -14,8 +14,9 @@ public class Destruc_Blocs : MonoBehaviour {
 		
 	}
 
-	void OnTriggEnter2D ()
+	void OnTriggEnter2D (Collider other)
 	{
-
+		if (other.gameObject.CompareTag("ball"))
+           	Destroy(other.gameObject);
 	}
 }
