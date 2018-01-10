@@ -18,5 +18,6 @@ public class Destruct_Blocs_Color : MonoBehaviour {
 	{
 		if (other.gameObject.CompareTag("ball"))
            	Destroy(gameObject);
+           	UI_Manager.Instance().AddScore();
 	}
 }
