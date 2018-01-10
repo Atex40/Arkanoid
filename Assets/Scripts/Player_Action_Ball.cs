@@ -8,6 +8,9 @@ public class Player_Action_Ball : MonoBehaviour {
     public float ejectionSpeed;
     public float maxSpeed;
     public Rigidbody2D ballRb;
+    public Transform player;
+
+    private bool isLauch = false;
 
 	// Use this for initialization
 	void Start ()
@@ -18,9 +21,18 @@ public class Player_Action_Ball : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-		if(Input.GetKeyDown(launchKey))
+        if(!isLauch)
+        {
+            transform.position = new Vector2(player.position.x,player.position.y+1);
+        }
+
+		if(Input.GetKeyDown(launchKey) && !isLauch)
         {
             ballRb.AddForce(Vector2.up * ejectionSpeed, ForceMode2D.Impulse);
+            this.transform.parent = null;
+           
+            Debug.Log(isLauch);
+            isLauch = true;
         }
 	}
 
