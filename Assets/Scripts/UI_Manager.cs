@@ -37,10 +37,32 @@ void Awake ()
 		text_score.text = score.ToString();
 	}
 
-	public void AddScore ()
+	public void AddScore_Gris ()
 	{
-		score += 10;
+		score += 200;
 	}
 
+	public void AddScore_Green ()
+	{
+		score += 20;
+	}
 
+	public void AddScore_Pink ()
+	{
+		score += 40;
+	}
+
+	public void AddScore_Orange ()
+	{
+		score += 60;
+	}
+	public void AddScore_Bleue ()
+	{
+		score += 80;
+	}
+
+	public void AddScore_Rouge ()
+	{
+		score += 100;
+	}
 }

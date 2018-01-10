@@ -24,7 +24,7 @@ public class Destruc_Blocs_gris : MonoBehaviour {
         	if (bloc_gris <= 0)
         	{
             	Destroy(gameObject);
-            	UI_Manager.Instance().AddScore();
+            	UI_Manager.Instance().AddScore_Gris();
             }
         }
 	}
