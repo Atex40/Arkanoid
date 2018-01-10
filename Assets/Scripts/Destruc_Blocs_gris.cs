@@ -16,13 +16,13 @@ public class Destruc_Blocs_gris : MonoBehaviour {
 		
 	}
 
-	void OnTriggEnter2D (Collider other)
+	void OnCollisionEnter2D (Collision2D other)
 	{
     	if (other.gameObject.CompareTag("ball"))
         {
         	bloc_gris -= 1;
         	if (bloc_gris <= 0)
-            Destroy(other.gameObject);
+            Destroy(gameObject);
         }
 	}
 }

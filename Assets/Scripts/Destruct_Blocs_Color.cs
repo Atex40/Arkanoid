@@ -14,9 +14,9 @@ public class Destruct_Blocs_Color : MonoBehaviour {
 		
 	}
 
-	void OnTriggEnter2D (Collider other)
+	void OnCollisionEnter2D (Collision2D other)
 	{
 		if (other.gameObject.CompareTag("ball"))
-           	Destroy(other.gameObject);
+           	Destroy(gameObject);
 	}
 }
