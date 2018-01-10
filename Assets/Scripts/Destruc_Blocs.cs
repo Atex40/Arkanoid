@@ -13,4 +13,9 @@ public class Destruc_Blocs : MonoBehaviour {
 	void Update () {
 		
 	}
+
+	void OnTriggEnter2D ()
+	{
+
+	}
 }
